@@ -43,13 +43,13 @@ const Contact = () => {
 		};
 
 		const validatedData = formValidator2(form);
-		for (let i = 0; i < validatedData.length; i++){
+		for (let i = 0; i < validatedData.length; i++) {
 			if (!validatedData[i].returnBool) {
 				setLoading(false);
 				return messageHandler(validatedData[i].returnText, 'bg-red-500');
 			}
 		}
-		
+
 		emailjs
 			.sendForm(
 				process.env.REACT_APP_EMAILJS_SERVICE_ID,
@@ -81,11 +81,11 @@ const Contact = () => {
 	return (
 		<div
 			id='Contact'
-			className='xl:mt-12 flex xl:flex-row flex-col gap-10 overflow-hidden intersector relative'
+			className='xl:mt-12 flex lg:flex-row flex-col gap-10 overflow-hidden intersector relative'
 		>
 			<motion.div
 				variants={slideIn('left', 'tween', 0.2, 1)}
-				className='flex-[0.75] bg-[rgba(0,0,0,0.7)] p-8 rounded-md border border-slate-900'
+				className='flex-[0.75] bg-[rgba(0,0,0,0.7)] p-8 rounded-md border border-slate-900 max-w-[500px]'
 			>
 				<p className={styles.sectionSubText}>Get in touch</p>
 				<h3 className={styles.sectionHeadText}>Contact.</h3>
@@ -142,11 +142,13 @@ const Contact = () => {
 					)}
 				</form>
 			</motion.div>
-
 			<motion.div
 				variants={slideIn('right', 'tween', 0.2, 1)}
-				className='xl:flex-1 xl:h-auto md:h-[550px] h-[350px]'
+				className='lg:flex-1 xl:h-auto md:h-[550px] h-[350px] relative'
 			>
+				<div className='absolute top-3 md:top-10 user-none w-[100%] text-center text-[14px]'>
+					<p>Click and rotate</p>
+				</div>
 				<EarthCanvas />
 			</motion.div>
 		</div>

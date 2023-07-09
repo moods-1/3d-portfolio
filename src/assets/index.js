@@ -28,6 +28,7 @@ import covid from './covid.png';
 
 import Herman from './testimonials/herman-kwayu.jpg';
 import Gideon from './testimonials/gideon-bamuleseyo.jpg';
+import Debbie from './testimonials/debbie-adejumo.jpg';
 
 export {
 	logo,
@@ -54,4 +55,5 @@ export {
 	Rotate360,
 	Herman,
 	Gideon,
+	Debbie,
 };

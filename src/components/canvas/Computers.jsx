@@ -29,7 +29,7 @@ const Computers = ({ isMobile, scale }) => {
 	);
 };
 
-const ComputersCanvas = () => {
+const ComputersCanvas = ({ downAction }) => {
 	const [isMobile, setIsMobile] = useState(false);
 	const [scale, setScale] = useState(0.6);
 
@@ -62,6 +62,7 @@ const ComputersCanvas = () => {
 			dpr={[1, 2]}
 			camera={{ position: [20, 3, 5], fov: 25 }}
 			gl={{ preserveDrawingBuffer: true }}
+			onMouseDown={downAction}
 		>
 			<Suspense fallback={<CanvasLoader />}>
 				<OrbitControls

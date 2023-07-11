@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { SectionWrapper } from '../hoc';
 import { styles } from '../styles';
@@ -10,7 +11,9 @@ const image360Variants = {
 		transition: { duration: 2, repeat: Infinity },
 	},
 };
+
 const Hero = () => {
+	const [showGuide, setShowGuide] = useState(true);
 	return (
 		<section className={`relative w-full h-screen mx-auto`}>
 			<div
@@ -30,20 +33,25 @@ const Hero = () => {
 						<br className='sm:block hidden' /> that generate memorable UI/UX
 						experiences.
 					</p>
-					<motion.div
-						variants={image360Variants}
-						animate='visible'
-						className='text-center w-full my-5'
-					>
-						<img
-							src={Rotate360}
-							alt='rotate-360'
-							className='w-12 h-12 mx-auto'
-						/>
-					</motion.div>
+					{showGuide && (
+						<motion.div
+							variants={image360Variants}
+							animate='visible'
+							className='text-center w-full my-5'
+						>
+							<img
+								src={Rotate360}
+								alt='rotate-360'
+								className='w-12 h-12 mx-auto'
+							/>
+							<p className='text-purple text-[12px] mt-[-10px]'>
+								Click and rotate
+							</p>
+						</motion.div>
+					)}
 				</div>
 			</div>
-			<ComputersCanvas />
+			<ComputersCanvas downAction={() => setShowGuide(false)} />
 		</section>
 	);
 };

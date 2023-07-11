@@ -8,7 +8,15 @@ import { SectionWrapper } from '../hoc';
 import { slideIn } from '../utils/motion';
 import { formValidator2 } from '../utils/helperFunctions';
 
+const guideVariants = {
+	visible: {
+		opacity: [0, 0.5, 1, 0.5, 0],
+		transition: { duration: 2, repeat: Infinity },
+	},
+};
+
 const Contact = () => {
+	const [showGuide, setShowGuide] = useState(true);
 	const [message, setMessage] = useState({});
 	const [form, setForm] = useState({
 		name: '',
@@ -146,10 +154,17 @@ const Contact = () => {
 				variants={slideIn('right', 'tween', 0.2, 1)}
 				className='lg:flex-1 xl:h-auto md:h-[550px] h-[350px] relative'
 			>
-				<div className='absolute top-3 md:top-10 user-none w-[100%] text-center text-[14px]'>
-					<p>Click and rotate</p>
-				</div>
-				<EarthCanvas />
+				{showGuide && (
+					<motion.p
+						variants={guideVariants}
+						animate='visible'
+						className='absolute top-3 md:top-10 user-none w-[100%] text-center text-[14px] text-purple'
+					>
+						Click and rotate
+					</motion.p>
+				)}
+
+				<EarthCanvas downAction={() => setShowGuide(false)} />
 			</motion.div>
 		</div>
 	);

@@ -29,7 +29,6 @@ const Contact = () => {
 	const handleChange = (e) => {
 		const { target } = e;
 		const { name, value } = target;
-		console.log({ name });
 		let localValue;
 		if (name !== 'email') {
 			localValue = value.replace(/\s{2,}/g, ' ').trimStart();

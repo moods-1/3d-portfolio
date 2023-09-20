@@ -22,7 +22,7 @@ import Tailwind from './skills/tailwind.png';
 import ramani from './company/ramani-icon.png';
 import webflix from './webflix.png';
 import dashboard from './dashboard.png';
-import covid from './covid.png';
+import moodsU from './moods-u.png';
 
 // Testimonials
 
@@ -51,9 +51,9 @@ export {
 	HtmlBrackets,
 	webflix,
 	dashboard,
-	covid,
 	Rotate360,
 	Herman,
 	Gideon,
 	Debbie,
+	moodsU
 };

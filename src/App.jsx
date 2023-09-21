@@ -29,9 +29,9 @@ const App = () => {
 		</div>,
 	];
 
-	Mixpanel.track('3D portfolio app accessed.', {
-		action: '3D portfolio app accessed.',
-	});
+	// Mixpanel.track('3D portfolio app accessed.', {
+	// 	action: '3D portfolio app accessed.',
+	// });
 
 	return (
 		<BrowserRouter>

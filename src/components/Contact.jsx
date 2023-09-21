@@ -5,7 +5,6 @@ import emailjs from '@emailjs/browser';
 import { styles } from '../styles';
 import { EarthCanvas } from './canvas';
 import { SectionWrapper } from '../hoc';
-import { slideIn } from '../utils/motion';
 import { formValidator2 } from '../utils/helperFunctions';
 
 const guideVariants = {
@@ -90,13 +89,9 @@ const Contact = () => {
 			id='Contact'
 			className='xl:mt-12 flex lg:flex-row flex-col gap-10 overflow-hidden intersector relative'
 		>
-			<motion.div
-				variants={slideIn('left', 'tween', 0.2, 1)}
-				className='flex-[0.75] bg-[rgba(0,0,0,0.7)] p-8 rounded-md border border-slate-900 max-w-[500px]'
-			>
+			<div className='flex-[0.75] bg-[rgba(0,0,0,0.7)] p-8 rounded-md border border-slate-900 max-w-[500px]'>
 				<p className={styles.sectionSubText}>Get in touch</p>
 				<h3 className={styles.sectionHeadText}>Contact.</h3>
-
 				<form onSubmit={handleSubmit} className='mt-12 flex flex-col gap-8'>
 					<label className='flex flex-col'>
 						<span className='text-white font-medium mb-4'>Your Name</span>
@@ -148,11 +143,8 @@ const Contact = () => {
 						</button>
 					)}
 				</form>
-			</motion.div>
-			<motion.div
-				variants={slideIn('right', 'tween', 0.2, 1)}
-				className='lg:flex-1 xl:h-auto md:h-[550px] h-[350px] relative'
-			>
+			</div>
+			<div className='lg:flex-1 xl:h-auto md:h-[550px] h-[350px] relative'>
 				{showGuide && (
 					<motion.p
 						variants={guideVariants}
@@ -162,9 +154,8 @@ const Contact = () => {
 						Click and rotate
 					</motion.p>
 				)}
-
 				<EarthCanvas downAction={() => setShowGuide(false)} />
-			</motion.div>
+			</div>
 		</div>
 	);
 };

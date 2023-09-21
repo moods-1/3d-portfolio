@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 
 import { styles } from '../styles';
 import { SectionWrapper } from '../hoc';
-import { fadeIn, textVariant } from '../utils/motion';
+import { fadeIn } from '../utils/motion';
 import { testimonials } from '../constants';
 import { testimonialSetter } from '../utils/helperFunctions';
 
@@ -75,7 +75,7 @@ const FeedbackCard = ({
 						<span className='blue-text-gradient'>@</span> {name}
 					</p>
 					<p className='mt-1 blue-text-gradient text-[15px]'>{designation}</p>
-					<p className='text-gray-500 text-[15px]'>{company}</p>
+					<p className='text-gray-300 text-[15px]'>{company}</p>
 				</div>
 				<ProfileSetter person={name} profile={image} linkedIn={linkedIn} />
 			</div>
@@ -87,10 +87,10 @@ const Feedbacks = () => {
 	return (
 		<div className={`mt-12 bg-black-100 rounded-[20px]`}>
 			<div className={`bg-black rounded-2xl ${styles.padding} min-h-[300px]`}>
-				<motion.div variants={textVariant()}>
+				<div>
 					<p className={styles.sectionSubText}>What others say</p>
 					<h2 className={styles.sectionHeadText}>Testimonials.</h2>
-				</motion.div>
+				</div>
 			</div>
 			<div
 				className={`-mt-20 pb-14 ${styles.paddingX} pt-[60px] bg-neutral-900 flex flex-wrap gap-7 rounded-md`}

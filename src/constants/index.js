@@ -83,7 +83,8 @@ const experiences = [
 
 const testimonials = [
 	{
-		testimonial: "Whether it's bringing designs to life or tackling complex backend challenges, Carl consistently exceeds expectations and delivers outstanding results.\nWhat sets Carl apart is his dedication to going above and beyond. He's not only mastered front-end development but also expanded his skills to become a proficient backend engineer. This versatility is invaluable to our team as he seamlessly transitions between tasks and consistently achieves exceptional results.",
+		testimonial:
+			"Whether it's bringing designs to life or tackling complex backend challenges, Carl consistently exceeds expectations and delivers outstanding results.\nWhat sets Carl apart is his dedication to going above and beyond. He's not only mastered front-end development but also expanded his skills to become a proficient backend engineer. This versatility is invaluable to our team as he seamlessly transitions between tasks and consistently achieves exceptional results.",
 		name: 'Herman Kwayu',
 		designation: 'Sr.Project Manager',
 		company: 'Ramani Corp.',
@@ -167,9 +168,9 @@ const projects = [
 		source_code_link: 'https://github.com/moods-1/webflix',
 	},
 	{
-		name: 'Task Dashboard',
+		name: 'Dashboard',
 		description:
-			'A drag and drop task management dashboard. Charts and graphs are available for clear performance visibility. The user can edit and add tasks and users.',
+			'A drag and drop task management dashboard. Charts and graphs are available for clear performance visibility. The user can edit and add customers, tasks and users.',
 		tags: [
 			{
 				name: 'react',

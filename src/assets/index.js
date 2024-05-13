@@ -23,6 +23,8 @@ import ramani from './company/ramani-icon.png';
 import webflix from './webflix.png';
 import dashboard from './dashboard.png';
 import moodsU from './moods-u.png';
+import herbNation from './herb-nation.jpg';
+import pizzeria from './pizzeria-modi.jpg';
 
 // Testimonials
 
@@ -51,6 +53,8 @@ export {
 	HtmlBrackets,
 	webflix,
 	dashboard,
+	herbNation,
+	pizzeria,
 	Rotate360,
 	Herman,
 	Gideon,

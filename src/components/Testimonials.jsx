@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 
 import { styles } from '../styles';
-import { SectionWrapper } from '../hoc';
 import { fadeIn } from '../utils/motion';
 import { testimonials } from '../constants';
 import { testimonialSetter } from '../utils/helperFunctions';
@@ -103,4 +102,4 @@ const Feedbacks = () => {
 	);
 };
 
-export default SectionWrapper(Feedbacks, '');
+export default Feedbacks;

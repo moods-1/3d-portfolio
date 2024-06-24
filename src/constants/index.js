@@ -12,6 +12,8 @@ import {
 	Vue,
 	SASS,
 	JQuery,
+	TypeScript,
+	NextJS,
 	HtmlBrackets,
 	webflix,
 	dashboard,
@@ -21,6 +23,7 @@ import {
 	Gideon,
 	Debbie,
 	moodsU,
+	mbank
 } from '../assets';
 
 export const navLinks = {
@@ -144,6 +147,32 @@ const projects = [
 		source_code_link: 'https://github.com/moods-1/moods-u-online',
 	},
 	{
+		name: 'MBank Financial',
+		description:
+			'An online banking app. Clients can move money between their accounts. They can also make payments, and view and filter transactions.',
+		tags: [
+			{
+				name: 'nextjs',
+				color: 'text-cyan-400',
+			},
+			{
+				name: 'typescript',
+				color: 'text-white',
+			},
+			{
+				name: 'redux',
+				color: 'text-red-500',
+			},
+			{
+				name: 'mongodb',
+				color: 'text-green-500',
+			},
+		],
+		image: mbank,
+		url: 'https://mbank-financial.vercel.app/login',
+		source_code_link: 'https://github.com/moods-1/mbank.git',
+	},
+	{
 		name: 'Webflix',
 		description:
 			'A multi-media app that is visually similar to the frontend of Netflix. The content is dynamically loaded based on various criteria such as genres, trending, and source networks.',
@@ -255,6 +284,18 @@ const skills = [
 		img: JavaScript,
 		skill: 'JavaScript',
 		color: 'rgba(255,255,0,0.2)',
+		level: '90%',
+	},
+	{
+		img: TypeScript,
+		skill: 'TypeScript',
+		color: 'rgba(30,144,255,0.2)',
+		level: '90%',
+	},
+	{
+		img: NextJS,
+		skill: 'Next.js',
+		color: 'rgba(255,255,255,0.3)',
 		level: '90%',
 	},
 	{

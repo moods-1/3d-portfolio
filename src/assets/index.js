@@ -18,6 +18,9 @@ import SASS from './skills/sass.png';
 import JQuery from './skills/jquery.png';
 import HtmlBrackets from './skills/html-brackets.png';
 import Tailwind from './skills/tailwind.png';
+import TypeScript from './skills/typescript.png';
+import NextJS from './skills/next-js.png';
+
 
 import ramani from './company/ramani-icon.png';
 import webflix from './webflix.png';
@@ -25,6 +28,7 @@ import dashboard from './dashboard.png';
 import moodsU from './moods-u.png';
 import herbNation from './herb-nation.jpg';
 import pizzeria from './pizzeria-modi.jpg';
+import mbank from './mbank.png';
 
 // Testimonials
 
@@ -50,6 +54,8 @@ export {
 	SASS,
 	Tailwind,
 	JQuery,
+	TypeScript,
+	NextJS,
 	HtmlBrackets,
 	webflix,
 	dashboard,
@@ -59,5 +65,6 @@ export {
 	Herman,
 	Gideon,
 	Debbie,
-	moodsU
+	moodsU,
+	mbank
 };

@@ -20,6 +20,7 @@ import HtmlBrackets from './skills/html-brackets.png';
 import Tailwind from './skills/tailwind.png';
 import TypeScript from './skills/typescript.png';
 import NextJS from './skills/next-js.png';
+import Docker from './skills/docker.png';
 
 
 import ramani from './company/ramani-icon.png';
@@ -56,6 +57,7 @@ export {
 	JQuery,
 	TypeScript,
 	NextJS,
+	Docker,
 	HtmlBrackets,
 	webflix,
 	dashboard,

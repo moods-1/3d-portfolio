@@ -18,7 +18,7 @@ const Computers = ({ isMobile, scale }) => {
 				castShadow
 				shadow-mapSize={1024}
 			/>
-			<pointLight intensity={1} />
+			<pointLight intensity={0.5} />
 			<primitive
 				object={computer.scene}
 				scale={scale}
@@ -72,7 +72,6 @@ const ComputersCanvas = ({ downAction }) => {
 				/>
 				<Computers isMobile={isMobile} scale={scale} />
 			</Suspense>
-
 			<Preload all />
 		</Canvas>
 	);

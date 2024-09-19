@@ -1,12 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import Marquee from 'react-fast-marquee';
 
-import { styles } from '../styles';
 import { projects } from '../constants';
 import ProjectCard from './ProjectCard';
+import SectionHeader from './SectionHeader';
 
-
-const Works = () => {
+const Projects = () => {
 	const [mobile, setMobile] = useState(window.innerWidth < 800);
 
 	useEffect(() => {
@@ -17,12 +16,9 @@ const Works = () => {
 	}, []);
 
 	return (
-		<div id='Projects' className='intersector'>
+		<div className='intersector pt-24'>
 			<div className='px-6 sm:px-16 max-w-7xl mx-auto relative z-0'>
-				<div>
-					<p className={`${styles.sectionSubText} `}>My work</p>
-					<h2 className={`${styles.sectionHeadText}`}>Projects.</h2>
-				</div>
+				<SectionHeader subText='My work' headText='Projects.' />
 				<div className='w-full flex'>
 					<p className='mt-3 text-gray-300 text-[17px] max-w-3xl leading-[30px]'>
 						Following projects showcases my skills and experience through
@@ -41,20 +37,26 @@ const Works = () => {
 					))}
 				</div>
 			) : (
-				<Marquee
-					gradient={false}
-					className='overflow-y-visible py-10'
-					pauseOnHover
-					autoFill
-					speed={70}
-				>
-					{projects.map((project, index) => (
-						<ProjectCard key={`project-${index}`} index={index} {...project} />
-					))}
-				</Marquee>
+				<div className='max-w-[1920px] mx-auto'>
+					<Marquee
+						gradient={false}
+						className='overflow-y-visible py-10'
+						pauseOnHover
+						autoFill
+						speed={70}
+					>
+						{projects.map((project, index) => (
+							<ProjectCard
+								key={`project-${index}`}
+								index={index}
+								{...project}
+							/>
+						))}
+					</Marquee>
+				</div>
 			)}
 		</div>
 	);
 };
 
-export default Works;
+export default Projects;

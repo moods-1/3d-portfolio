@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 
-import { styles } from '../styles';
+import { SectionWrapper } from '../hoc';
 import { fadeIn } from '../utils/motion';
 import { testimonials } from '../constants';
 import { testimonialSetter } from '../utils/helperFunctions';
+import SectionHeader from './SectionHeader';
 
 const ProfileSetter = ({ person, profile, linkedIn }) => {
 	const image = (
@@ -82,17 +83,14 @@ const FeedbackCard = ({
 	</motion.div>
 );
 
-const Feedbacks = () => {
+const Testimonials = () => {
 	return (
-		<div className={`mt-12 bg-black-100 rounded-[20px]`}>
-			<div className={`bg-black rounded-2xl ${styles.padding} min-h-[300px]`}>
-				<div>
-					<p className={styles.sectionSubText}>What others say</p>
-					<h2 className={styles.sectionHeadText}>Testimonials.</h2>
-				</div>
+		<div className='intersector'>
+			<div className='min-h-[240px]'>
+				<SectionHeader subText='What others say' headText='Testimonials.' />
 			</div>
 			<div
-				className={`-mt-20 pb-14 ${styles.paddingX} pt-[60px] bg-neutral-900 flex flex-wrap gap-7 rounded-md`}
+				className={`-mt-20 pb-12 sm:px-12 px-5 pt-[60px] bg-neutral-900 flex flex-wrap gap-7 justify-around rounded-md`}
 			>
 				{testimonials.map((testimonial, index) => (
 					<FeedbackCard key={testimonial.name} index={index} {...testimonial} />
@@ -102,4 +100,4 @@ const Feedbacks = () => {
 	);
 };
 
-export default Feedbacks;
+export default SectionWrapper(Testimonials, 'testimonials');

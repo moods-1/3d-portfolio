@@ -16,9 +16,7 @@ import {
 const App = () => {
 	const elementsRef = useRef([]);
 	const elements = [
-		<div id='Hero' className='bg-hero-pattern bg-cover bg-no-repeat bg-center'>
-			<Hero />
-		</div>,
+		<Hero />,
 		<About />,
 		<Experience />,
 		<Projects />,
@@ -29,13 +27,13 @@ const App = () => {
 		</div>,
 	];
 
-	Mixpanel.track('3D portfolio app accessed.', {
-		action: '3D portfolio app accessed.',
-	});
+	// Mixpanel.track('3D portfolio app accessed.', {
+	// 	action: '3D portfolio app accessed.',
+	// });
 
 	return (
 		<BrowserRouter>
-			<div className='relative z-0 black-gradient-v'>
+			<div className='relative z-0 black-gradient-v overflow-hidden'>
 				<Navbar elementsRef={elementsRef} />
 				{elements.map((element, index) => (
 					<div key={index} ref={(el) => (elementsRef.current[index] = el)}>

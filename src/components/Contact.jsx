@@ -2,9 +2,9 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import emailjs from '@emailjs/browser';
 
-import { styles } from '../styles';
 import { EarthCanvas } from './canvas';
 import { SectionWrapper } from '../hoc';
+import SectionHeader from './SectionHeader';
 import { formValidator2 } from '../utils/helperFunctions';
 
 const guideVariants = {
@@ -85,13 +85,9 @@ const Contact = () => {
 	};
 
 	return (
-		<div
-			id='Contact'
-			className='xl:mt-12 flex lg:flex-row flex-col gap-10 overflow-hidden intersector relative'
-		>
+		<div className='xl:mt-12 flex lg:flex-row flex-col gap-10 overflow-hidden intersector relative'>
 			<div className='flex-[0.75] bg-[rgba(0,0,0,0.7)] p-8 rounded-md border border-slate-900 max-w-[500px]'>
-				<p className={styles.sectionSubText}>Get in touch</p>
-				<h3 className={styles.sectionHeadText}>Contact.</h3>
+				<SectionHeader subText='Get in touch' headText='Contact.' />
 				<form onSubmit={handleSubmit} className='mt-12 flex flex-col gap-8'>
 					<label className='flex flex-col'>
 						<span className='text-white font-medium mb-4'>Your Name</span>

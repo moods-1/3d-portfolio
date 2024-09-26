@@ -16,6 +16,7 @@ import {
 	NextJS,
 	Docker,
 	SQL,
+	AWS,
 	HtmlBrackets,
 	webflix,
 	dashboard,
@@ -80,10 +81,11 @@ const experiences = [
 		date: 'April 2021 - June 2023',
 		points: [
 			'Maintained and updated a dynamic web-based SaaS dashboard and public website with React JS, TypeScript, Redux, Google Maps, Highcharts, React Beautiful DND, and various UI libraries',
-			'Collaborated with the design team in the creation of Figma generated wireframes',
+			'Collaborated with the design team in the creation of Figma wireframes',
 			'Worked with an international team of 12 developers, designers and QA in an Agile environment',
+			'Created REST APIs with Node.js, Express.js, and other modules with MongoDB as the database',
+			'Migrated the server to AWS, utilizing EC2 for scalable compute resources and S3 for secure data storage',
 			'Refactored the application to improve the Lighthouse Performance score by 10%, while achieving a Best Practices score of 100%, and SEO of 92% ',
-			'Created REST APIs with Node JS, Express, Mongoose, and various other modules and libraries',
 			'Conducted code/pull request reviews',
 			'Created and progressed stories with Jira, and used Bitbucket for version control'
 		],
@@ -345,7 +347,12 @@ const skills = [
 		color: 'rgba(50,205,50,0.2)',
 		level: '80%',
 	},
-
+	{
+		img: AWS,
+		skill: 'AWS',
+		color: 'rgba(255,165,0,0.3)',
+		level: '60%',
+	},
 	{ img: Docker, skill: 'Docker', color: 'rgba(30,144,255,0.2)', level: '80%' },
 ];
 

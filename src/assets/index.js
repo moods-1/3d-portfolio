@@ -3,6 +3,7 @@ import github from './github.png';
 import menu from './menu.svg';
 import close from './close.svg';
 import Rotate360 from './rotate-360.png';
+import Mail from './mail.png';
 
 // Skills //
 import HTML from './skills/html.png';
@@ -23,6 +24,7 @@ import NextJS from './skills/next-js.png';
 import Docker from './skills/docker.png';
 import SQL from './skills/sql.png';
 import AWS from './skills/aws.png';
+import ThreeJS from './skills/three-js.png';
 
 import ramani from './company/ramani-icon.png';
 import webflix from './webflix.png';
@@ -71,5 +73,7 @@ export {
 	Gideon,
 	Debbie,
 	moodsU,
-	mbank
+	mbank,
+	Mail,
+	ThreeJS
 };

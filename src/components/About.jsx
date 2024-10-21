@@ -50,12 +50,12 @@ const About = () => {
 				real-world problems. Let's work together to bring your ideas to life!
 			</p>
 			<a
-				href='https://drive.google.com/file/d/1FMweVOQXkXZz1nYsNLvtqCW3XjGoBvT7/view?usp=sharing'
+				href='https://drive.google.com/file/d/1EdptGkDlad9v5mgmkS6FoaKEK9O8KD6c/view?usp=sharing'
 				rel='noopener noreferrer'
 				target='_blank'
-				className='bg-purple inline-block py-2 px-8 rounded-md outline-none text-white min-w-[140px] mt-8'
+				className='action-button mt-8'
 			>
-				CV/Resume
+				<span>CV/Resume</span>
 			</a>
 
 			<div className='mt-20 flex flex-wrap gap-10 justify-center xs:justify-start'>

@@ -27,6 +27,7 @@ import {
 	Debbie,
 	moodsU,
 	mbank,
+	ThreeJS
 } from '../assets';
 
 export const navLinks = {
@@ -312,6 +313,12 @@ const skills = [
 		skill: 'React JS',
 		color: 'rgba(0,255,255,0.1)',
 		level: '90%',
+	},
+	{
+		img: ThreeJS,
+		skill: 'Three JS',
+		color: 'rgba(255,255,255,0.4)',
+		level: '50%',
 	},
 	{
 		img: NextJS,

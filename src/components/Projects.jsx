@@ -16,9 +16,9 @@ const Projects = () => {
 	}, []);
 
 	return (
-		<div className='intersector pt-24'>
-			<div className='px-6 sm:px-16 max-w-7xl mx-auto relative z-0'>
-				<SectionHeader subText='My work' headText='Projects.' />
+		<main id='projects' className='intersector'>
+			<div className='section-padding w-full max-w-7xl mx-auto relative z-0'>
+			<SectionHeader subText='My work' headText='Projects.' />
 				<div className='w-full flex'>
 					<p className='mt-3 text-gray-300 text-[17px] max-w-3xl leading-[30px]'>
 						The following projects showcase my skills and experience through
@@ -55,7 +55,7 @@ const Projects = () => {
 					</Marquee>
 				</div>
 			)}
-		</div>
+		</main>
 	);
 };
 

@@ -3,7 +3,6 @@ import Tilt from 'react-tilt';
 import { motion } from 'framer-motion';
 
 import { services } from '../constants';
-import { SectionWrapper } from '../hoc';
 import { fadeIn } from '../utils/motion';
 import { Skills } from './';
 import SectionHeader from './SectionHeader';
@@ -40,32 +39,34 @@ const ServiceCard = ({ index, title, icon }) => (
 
 const About = () => {
 	return (
-		<div className='intersector'>
-			<SectionHeader subText='Introduction' headText='Overview.' />
-			<p className='mt-4 text-gray-300 text-[17px] max-w-3xl leading-[30px]'>
-				I'm a skilled software developer with experience in TypeScript and
-				JavaScript, and expertise in frameworks like React, Node.js, and
-				Three.js. I'm a quick learner and collaborate closely with clients to
-				create efficient, scalable, and user-friendly solutions that solve
-				real-world problems. Let's work together to bring your ideas to life!
-			</p>
-			<a
-				href='https://drive.google.com/file/d/1EdptGkDlad9v5mgmkS6FoaKEK9O8KD6c/view?usp=sharing'
-				rel='noopener noreferrer'
-				target='_blank'
-				className='action-button mt-8'
-			>
-				<span>CV/Resume</span>
-			</a>
+		<main id='about' className='intersector'>
+			<section>
+				<SectionHeader subText='Introduction' headText='Overview.' />
+				<p className='mt-4 text-gray-300 text-[17px] max-w-3xl leading-[30px]'>
+					I'm a skilled software developer with experience in TypeScript and
+					JavaScript, and expertise in frameworks like React, Node.js, and
+					Three.js. I'm a quick learner and collaborate closely with clients to
+					create efficient, scalable, and user-friendly solutions that solve
+					real-world problems. Let's work together to bring your ideas to life!
+				</p>
+				<a
+					href='https://drive.google.com/file/d/1EdptGkDlad9v5mgmkS6FoaKEK9O8KD6c/view?usp=sharing'
+					rel='noopener noreferrer'
+					target='_blank'
+					className='action-button mt-8'
+				>
+					<span>CV/Resume</span>
+				</a>
 
-			<div className='mt-20 flex flex-wrap gap-10 justify-center xs:justify-start'>
-				{services.map((service, index) => (
-					<ServiceCard key={service.title} index={index} {...service} />
-				))}
-			</div>
-			<Skills />
-		</div>
+				<div className='mt-20 flex flex-wrap gap-10 justify-center xs:justify-start'>
+					{services.map((service, index) => (
+						<ServiceCard key={service.title} index={index} {...service} />
+					))}
+				</div>
+				<Skills />
+			</section>
+		</main>
 	);
 };
 
-export default SectionWrapper(About, 'about');
+export default About;

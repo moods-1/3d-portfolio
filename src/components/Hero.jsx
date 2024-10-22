@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 
 import { ComputersCanvas } from './canvas';
 import { Rotate360 } from '../assets';
+import { RevealSlideOut } from './Buttons';
 
 const image360Variants = {
 	visible: {
@@ -29,10 +30,20 @@ const Hero = () => {
 						Hi, I'm <span className='text-purple'>Carl</span>
 					</h1>
 					<p className='hero-sub-text'>
-						I develop full stack applications{' '}
-						<br className='sm:block hidden' /> that generate memorable UI/UX
-						experiences.
+						I develop full stack applications <br className='sm:block hidden' />{' '}
+						that generate memorable UI/UX experiences.
 					</p>
+					<RevealSlideOut
+						buttonText='Spread Out Plus'
+						buttonClass='bg-black max-w-[160px] h-9 rounded-md !border-purple mt-8 z-10'
+						pseudoClass='bg-purple max-w-[160px] h-full whitespace-nowrap group-hover:text-purple z-10'
+						leftContent='Abou'
+						rightContent='t Me'
+					>
+						<a href='#about' className='z-0'>
+							Let's Go!
+						</a>
+					</RevealSlideOut>
 					{showGuide && (
 						<motion.div
 							variants={image360Variants}
